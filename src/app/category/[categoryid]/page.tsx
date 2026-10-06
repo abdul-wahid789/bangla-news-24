@@ -8,7 +8,7 @@ const CategoryPage = async ({ params }: { params: Promise<{ categoryid: string }
     const { categoryid } = await params
     const { news } = await categoryNewsPromise(categoryid)
     return (
-        <div className="grid grid-cols-3 gap-3 my-5">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 my-5 mx-5">
             {
                 news.map(news => <Link href={`/article/${news.id}`} key={news.id}>
                     <section className="card bg-base-100 shadow-sm

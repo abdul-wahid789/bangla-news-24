@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/shared/Navbar";
 import Marquee from "react-fast-marquee";
 import Headline from "./components/shared/Headlines";
+import Footer from "./components/shared/Footer";
 
 const notoSerifBengali = Noto_Serif_Bengali({
   variable: "--font-noto_serif",
@@ -25,11 +26,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-       <Headline/>
+        <Headline />
         <main className="container mx-auto">
 
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
